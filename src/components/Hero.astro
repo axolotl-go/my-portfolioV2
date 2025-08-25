@@ -1,20 +1,26 @@
-<div id="hero" class="relative min-h-screen px-12">
+---
+import hero from "../data/hero.json";
+import Ellipse from "../assets/Ellipse.svg";
+---
+
+<div class="relative min-h-[calc(100dvh-70px)] container mx-auto px-4">
   <!-- Lado izquierdo -->
   <div class="absolute left-4 flex">
-    <p
-      class="[writing-mode:vertical-rl] text-xs text-purple-500 opacity-60 tracking-widest"
-    >
-      WEB DEVELOPER・ウェブ開発者 WEB DEVELOPER・ウェブ開発者
-    </p>
-    <p
-      class="[writing-mode:vertical-rl] text-xs text-purple-500 opacity-60 tracking-widest"
-    >
-      WEB DEVELOPER・ウェブ開発者 WEB DEVELOPER・ウェブ開発者
-    </p>
+    {
+      hero.data.map(({ japan, spanish }) =>
+        [...Array(2)].map(() => (
+          <p class="[writing-mode:vertical-rl] text-purple-500 opacity-60 tracking-widest">
+            {`${japan.toLocaleUpperCase()} · ${spanish.toLocaleUpperCase()} · `.repeat(
+              3
+            )}
+          </p>
+        ))
+      )
+    }
   </div>
 
   <!-- Contenido central -->
-  <div class="flex flex-col gap-6 z-10">
+  <div class="flex flex-col gap-6 z-10 mt-8 ml-20 md:ml-24">
     <div>
       <p class="text-sky-200 text-lg">アキソロトル開発</p>
       <h2 class="text-sky-100 text-5xl md:text-6xl font-bold">AXOLOTL DEV</h2>
@@ -39,20 +45,18 @@
 
   <!-- Lado derecho -->
   <div class="absolute inset-y-0 right-4 flex">
-    <p
-      class="[writing-mode:vertical-rl] text-purple-900 font-bold text-3xl md:text-5xl leading-relaxed tracking-wide"
-    >
-      モバイルアプリ
-    </p>
-    <p
-      class="[writing-mode:vertical-rl] text-purple-900 font-bold text-3xl md:text-5xl leading-relaxed tracking-wide"
-    >
-      デスクトップアプリ
-    </p>
-    <p
-      class="[writing-mode:vertical-rl] text-purple-900 font-bold text-3xl md:text-5xl leading-relaxed tracking-wide"
-    >
-      ウェブサイトを作る
-    </p>
+    {
+      hero.dataV2.map(({ title }) => (
+        <p class="[writing-mode:vertical-rl] text-purple-900 font-bold text-3xl md:text-5xl leading-relaxed tracking-wide">
+          {title}
+        </p>
+      ))
+    }
+  </div>
+
+  <div
+    class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center items-center"
+  >
+    <Ellipse />
   </div>
 </div>

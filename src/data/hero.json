@@ -4,5 +4,17 @@
             "japan":"ウェブ開発者",
             "spanish":"Web developer"
         }
+        
+    ],
+    "dataV2": [
+        {
+            "title":"モバイルアプリ"
+        },
+        {
+            "title":"デスクトップアプリ"
+        },
+        {
+            "title":"ウェブサイトを作る"
+        }
     ]
 }
