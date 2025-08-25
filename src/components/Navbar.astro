@@ -1,0 +1,26 @@
+---
+import navigation from "../data/navigation.json";
+---
+
+<nav class="bg-[#080410]">
+  <div class="flex items-center justify-between container mx-auto px-4 py-3">
+    <a href="/" class="text-white text-2xl font-semibold whitespace-nowrap">
+      Axolotl
+    </a>
+    <div class="hidden w-full md:block md:w-auto">
+      <ul
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:mt-0"
+      >
+        {
+          navigation.data.map(({ link, title }) => (
+            <li class="bg-gray-50 md:bg-transparent">
+              <a href={link} class="text-white block py-2 px-3">
+                {title.toUpperCase()}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

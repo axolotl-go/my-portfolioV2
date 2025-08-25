@@ -1,0 +1,16 @@
+{
+  "data": [
+    {
+      "title": "About",
+      "link": "#about-me"
+    },
+    {
+      "title": "Projects",
+      "link": "projects"
+    },
+    {
+      "title": "Contact",
+      "link": "#contact"
+    }
+  ]
+}
