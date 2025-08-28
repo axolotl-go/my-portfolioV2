@@ -5,22 +5,24 @@ import Ellipse from "../assets/Ellipse.svg";
 
 <div class="relative min-h-[calc(100dvh-70px)] container mx-auto px-4">
   <!-- Lado izquierdo -->
-  <div class="absolute left-4 flex">
+  <div class="absolute left-4 flex overflow-hidden h-[calc(100dvh-70px)]">
     {
       hero.data.map(({ japan, spanish }) =>
-        [...Array(2)].map(() => (
-          <p class="[writing-mode:vertical-rl] text-purple-500 opacity-60 tracking-widest">
+        [...Array(2)].map((_, i) => (
+          <span
+            class={`[writing-mode:vertical-rl] text-purple-500 opacity-60 tracking-widest text-nowrap h-[calc(100dvh-70px)] ${i == 0 ? "scroll-up" : "scroll-down"}`}
+          >
             {`${japan.toLocaleUpperCase()} · ${spanish.toLocaleUpperCase()} · `.repeat(
-              3
+              10
             )}
-          </p>
+          </span>
         ))
       )
     }
   </div>
 
   <!-- Contenido central -->
-  <div class="flex flex-col gap-6 z-10 mt-8 ml-20 md:ml-24">
+  <div class="flex flex-col gap-6 z-10 mt-8 ml-32 md:ml-24 absolute">
     <div>
       <p class="text-sky-200 text-lg">アキソロトル開発</p>
       <h2 class="text-sky-100 text-5xl md:text-6xl font-bold">AXOLOTL DEV</h2>
@@ -53,10 +55,11 @@ import Ellipse from "../assets/Ellipse.svg";
       ))
     }
   </div>
+</div>
 
-  <div
-    class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex justify-center items-center"
-  >
-    <Ellipse />
-  </div>
+<!-- Ellipse -->
+<div
+  class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex justify-center items-center"
+>
+  <Ellipse />
 </div>

@@ -10,3 +10,32 @@ body {
     color: var(--color-primary);
     font-family: sans-serif;
 }
+
+
+.scroll-up {
+  animation: scroll-up 15s linear infinite;
+  white-space: nowrap; /* Asegura que el texto no se rompa */
+}
+
+.scroll-down {
+  animation: scroll-down 15s linear infinite;
+  white-space: nowrap; /* Asegura que el texto no se rompa */
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
