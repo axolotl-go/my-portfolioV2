@@ -1,0 +1,28 @@
+<svg
+  width="764"
+  height="772"
+  viewBox="0 0 764 772"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <ellipse
+    opacity="0.15"
+    cx="382"
+    cy="386"
+    rx="382"
+    ry="386"
+    fill="url(#paint0_radial_11_235)"></ellipse>
+  <defs>
+    <radialGradient
+      id="paint0_radial_11_235"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(382 386) rotate(90) scale(386 382)"
+    >
+      <stop stop-color="white" stop-opacity="0.7"></stop>
+      <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+    </radialGradient>
+  </defs>
+</svg>

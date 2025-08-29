@@ -1,12 +1,12 @@
 {
   "data": [
     {
-      "title": "About",
+      "title": "Who Am I?",
       "link": "#about-me"
     },
     {
       "title": "Projects",
-      "link": "projects"
+      "link": "#projects"
     },
     {
       "title": "Contact",

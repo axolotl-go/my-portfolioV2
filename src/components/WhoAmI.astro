@@ -1,0 +1,63 @@
+---
+import Round from "../assets/Round.svg";
+---
+
+<div
+  id="about-me"
+  class="flex flex-col justify-center items-center h-screen container mx-auto px-4 mt-14 space-y-12"
+>
+  <!-- Up -->
+  <div class="relative">
+    <p
+      class="text-[#D4F5F5] flex flex-col text-6xl font-extrabold -tracking-[4%] italic"
+    >
+      <span class="text-lg absolute left-0 -ml-6 leading-none -translate-y-2"
+        >1/</span
+      >
+      {"WHO AM I?"}
+      <span class="text-2xl text-end text-[#728E9F]">私について</span>
+    </p>
+  </div>
+
+  <!-- Down -->
+  <div
+    class="flex flex-col md:flex-row w-full gap-12 md:gap-16 justify-around mt-28 px-4 md:px-0"
+  >
+    <!-- Left -->
+    <div class="md:w-[500px] w-full text-justify">
+      <p class="text-lg text-gray-300">
+        I'm <span class="font-semibold text-white">Javier</span>, a full–stack
+        developer with experience in
+        <span class="text-purple-400">Go, JavaScript, TypeScript, and C#</span>.
+        I specialize in creating scalable and functional applications, from
+        backend to frontend. I am committed to continuous improvement and
+        learning new technologies to provide innovative and high-impact
+        solutions.
+      </p>
+    </div>
+
+    <!-- Right -->
+    <div class="grid grid-cols-2 gap-6 md:w-[500px] mt-8 md:mt-0">
+      <div class="flex flex-col">
+        <p class="text-sm font-extrabold text-white/70">Experience</p>
+        <p class="text-lg font-bold">4 years</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-extrabold text-white/70">Projects</p>
+        <p class="text-lg font-bold">+10</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-extrabold text-white/70">Clients</p>
+        <p class="text-lg font-bold">5</p>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-sm font-extrabold text-white/70">Awards</p>
+        <p class="text-lg font-bold">3</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute justify-center items-center">
+    <Round />
+  </div>
+</div>

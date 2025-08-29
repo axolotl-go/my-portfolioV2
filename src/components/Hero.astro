@@ -4,13 +4,13 @@ import Ellipse from "../assets/Ellipse.svg";
 ---
 
 <div class="relative min-h-[calc(100dvh-70px)] container mx-auto px-4">
-  <!-- Lado izquierdo -->
+  <!-- Side Left -->
   <div class="absolute left-4 flex overflow-hidden h-[calc(100dvh-70px)]">
     {
       hero.data.map(({ japan, spanish }) =>
         [...Array(2)].map((_, i) => (
           <span
-            class={`[writing-mode:vertical-rl] text-purple-500 opacity-60 tracking-widest text-nowrap h-[calc(100dvh-70px)] ${i == 0 ? "scroll-up" : "scroll-down"}`}
+            class={` font-[Helevetica] font-bold  [writing-mode:vertical-rl] rotate-180 text-purple-500 opacity-60 tracking-widest text-nowrap h-[calc(100dvh-70px)] ${i == 0 ? "scroll-up" : "scroll-down"}`}
           >
             {`${japan.toLocaleUpperCase()} · ${spanish.toLocaleUpperCase()} · `.repeat(
               10
@@ -21,14 +21,14 @@ import Ellipse from "../assets/Ellipse.svg";
     }
   </div>
 
-  <!-- Contenido central -->
+  <!-- Centeal Content -->
   <div class="flex flex-col gap-6 z-10 mt-8 ml-32 md:ml-24 absolute">
     <div>
       <p class="text-sky-200 text-lg">アキソロトル開発</p>
       <h2 class="text-sky-100 text-5xl md:text-6xl font-bold">AXOLOTL DEV</h2>
     </div>
 
-    <!-- Botones -->
+    <!-- Buttons -->
     <div class="flex gap-4">
       <a
         href="#curriculum"
@@ -45,7 +45,7 @@ import Ellipse from "../assets/Ellipse.svg";
     </div>
   </div>
 
-  <!-- Lado derecho -->
+  <!-- Side Right -->
   <div class="absolute inset-y-0 right-4 flex">
     {
       hero.dataV2.map(({ title }) => (
